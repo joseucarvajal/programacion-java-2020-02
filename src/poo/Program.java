@@ -10,6 +10,7 @@ package poo;
  * perdió y cuánto dinero debe pagar para repetir los créditos/asignatura. * 
  * 5. Crear al menos 5 estudiantes con diferentes valores
  * 6. Crear el proyecto en GitHub
+ * 7. Fecha máxima de entrega: domingo 09 de agosto 2020
  * */
 public class Program {
 
