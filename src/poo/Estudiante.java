@@ -5,16 +5,28 @@ public class Estudiante {
 	
 	//Atributos
 	String nombre;
-	Asignatura a1;
-	Asignatura a2;
-	Asignatura a3;
 	
+	Asignatura[] asignaturas = new Asignatura[15];
+	int cantAsignaturas = 0;
 	
 	//Métodos
 	float calcularPromedio() {
 		float prom = 0;
-		prom = (a1.nota + a2.nota + a3.nota) / 3;
-		return prom;
+		
+		for(int i = 0; i<cantAsignaturas; i++) {
+			prom = prom + asignaturas[i].nota;
+		}
+		
+		return prom / cantAsignaturas;
 	}
 	
 }
+
+
+
+
+
+
+
+
+
