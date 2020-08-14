@@ -13,17 +13,36 @@ package poo;
  * 5. Crear al menos 5 estudiantes con diferentes valores
  * 6. Crear el proyecto en GitHub * 
  * 
- * ---- 13 de agosto:
+ * ------------------- 13 de agosto: ---------------------------------
  * 7. Cambiar todo el programa anterior para que utilice arreglos
  * 8. No permitir asignaturas repetidas
+ * 
+ * ------------------- 19 de agosto: ---------------------------------
+ * 9. Implementar método "addAsignatura", dentro de este método se deben validar las
+ * siguientes reglas:
+ * 	a. 	No permitir asignaturas repetidas
+ *  b. 	Cada estudiante tiene un número máximo de créditos y cada asignatura
+ *     	también tien un número máximo de créditos. Si el estudiante no tiene 
+ *  	suficientes créditos para agregar la asignatura, el sistema debe indicarle
+ *  	un error. 
+ *  		EJ: Un estudiante tiene 8 créditos
+ *  			Agrega la asignatura X1 = 3 créditos. Se agrega bien 
+ *  			Agrega la asignatura X2 = 4 créditos. Se agrega bien
+ *  			Agrega la asignatura X3 = 3 créditos. Sale error "No tiene créditos suficientes"
+ *  
+ *  Próxima clase:
+ *  	a.	Si sale algún error que no se termine el programa pero que muestre el error
+ *  		y que los objetos que hay en memoria, no se borren.
+ *  	b.	Terminar programa bajo cierto tipo de error 
  * */
 public class Program {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws Exception {
 			
 		//Crear un objeto Estudiante
 		Estudiante e1 = new Estudiante(); //6 = ADICIONAR + 1 = 7, cancelar = -2 -> 4
 		e1.nombre = "Pepito";
+			
 		
 		//Crear 3 objetos Asignatura
 		Asignatura as1 = new Asignatura();
@@ -46,17 +65,10 @@ public class Program {
 		as3.nota = 5;
 		as3.nroDeCreditos = 3;
 		
-		e1.asignaturas[0] = as1;
-		e1.cantAsignaturas++;
-		
-		e1.asignaturas[1] = as3;
-		e1.cantAsignaturas++;
-		
-		e1.asignaturas[2] = as3;
-		e1.cantAsignaturas++;
-		
-		e1.asignaturas[3] = as3;
-		e1.cantAsignaturas++;
+		e1.addAsignatura(as1);
+		e1.addAsignatura(as2);
+		e1.addAsignatura(as3);
+		e1.addAsignatura(as4);
 		
 		//Relaciones entre objetos
 		//Relación es: Un estudiante tiene 3 asignaturas.

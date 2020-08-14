@@ -6,7 +6,8 @@ public class Estudiante {
 	//Atributos
 	String nombre;
 	
-	Asignatura[] asignaturas = new Asignatura[15];
+	static final int MAX_ASIGNATURAS = 8;
+	Asignatura[] asignaturas = new Asignatura[Estudiante.MAX_ASIGNATURAS];
 	int cantAsignaturas = 0;
 	
 	//Métodos
@@ -20,6 +21,15 @@ public class Estudiante {
 		return prom / cantAsignaturas;
 	}
 	
+	public void addAsignatura(Asignatura a) throws Exception {
+		
+		if(cantAsignaturas == MAX_ASIGNATURAS) {
+			throw new Exception("El estudiante ya tiene inscritas el máximo de asignaturas");			
+		}
+		
+		asignaturas[cantAsignaturas] = a;
+		cantAsignaturas++;
+	}
 }
 
 
