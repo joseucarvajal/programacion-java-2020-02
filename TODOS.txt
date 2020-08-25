@@ -1,0 +1,51 @@
+ Realizar un programa que realice unos calculos con las notas de unas
+ asignaturas pertenecientes a un estudiante. Cálculos:
+ 
+ ------------------- 09 de agosto ---------------------------------
+ 1. Promedio del semestre: OK
+ 2. Cuántas notas/asignaturas perdió.
+ 3. Cuántas asignaturas ganó
+ 4. Cada asignatura tiene un número de créditos, se debe indicar cuántos créditos
+ perdió y cuánto dinero debe pagar para repetir los créditos/asignatura. 
+ 5. Crear al menos 5 estudiantes con diferentes valores
+ 6. Crear el proyecto en GitHub 
+ 
+ ------------------- 13 de agosto: ---------------------------------
+ 1. Cambiar todo el programa anterior para que utilice arreglos
+ 2. No permitir asignaturas repetidas
+ 
+ ------------------- 19 de agosto: ---------------------------------
+ 3. Implementar método "addAsignatura", dentro de este método se deben validar las
+ siguientes reglas:
+ 	a. 	No permitir asignaturas repetidas
+  b. 	Cada estudiante tiene un número máximo de créditos y cada asignatura
+     	también tien un número máximo de créditos. Si el estudiante no tiene 
+  	suficientes créditos para agregar la asignatura, el sistema debe indicarle
+  	un error. 
+  		EJ: Un estudiante tiene 8 créditos
+  			Agrega la asignatura X1 = 3 créditos. Se agrega bien 
+  			Agrega la asignatura X2 = 4 créditos. Se agrega bien
+  			Agrega la asignatura X3 = 3 créditos. Sale error "No tiene créditos suficientes"
+  
+  Próxima clase:
+  	a.	Si sale algún error que no se termine el programa pero que muestre el error
+  		y que los objetos que hay en memoria, no se borren.
+  	b.	Terminar programa bajo cierto tipo de error (MaxAsignaturasException)
+
+------------------- Sunday, Aug 30  ---------------------------------
+1. 
+
+	a) Resolver el problema del tamaño del arreglo. Se debe multiplicar el tamaño del arreglo de asignaturas, cuando se haya llegado al límite del mismo.
+	Ej: 
+		asignaturas = [{a(0)}, {a(1)}... {a(n-1)}]		
+		Tamaño máximo = n = MAX_ASIGNATURAS
+		asignaturas.length = n
+		cantAsignaturas = n
+		Problema: Se debe permitir que el estudiante agregue un número ilimitado de asignaturas. No se pueden agregar nuevas asignaturas por que el arreglo ya está lleno
+		
+		Solución: Duplicar el tamaño del arreglo
+					Pasos
+						Crear otro arreglo nuevo arr2 = [{a(0)}, {a(1)}... {a(2n-1)}]
+						Pasar todos los elementos del arr (Arreglo original) al arreglo arr1 que tiene el doble del tamaño del arreglo original. De esta manera, se pueden agregar más asignaturas.
+						
+	b) Subir el cambio a GitHub a más tardar el Sunday, Aug 30

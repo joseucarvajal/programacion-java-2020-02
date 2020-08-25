@@ -1,5 +1,7 @@
 package poo;
 
+import javax.swing.tree.ExpandVetoException;
+
 /*
  * Realizar un programa que realice unos calculos con las notas de unas
  * asignaturas pertenecientes a un estudiante. Cálculos:
@@ -33,7 +35,7 @@ package poo;
  *  Próxima clase:
  *  	a.	Si sale algún error que no se termine el programa pero que muestre el error
  *  		y que los objetos que hay en memoria, no se borren.
- *  	b.	Terminar programa bajo cierto tipo de error 
+ *  	b.	Terminar programa bajo cierto tipo de error (MaxAsignaturasException)
  * */
 public class Program {
 
@@ -42,7 +44,7 @@ public class Program {
 		//Crear un objeto Estudiante
 		Estudiante e1 = new Estudiante(); //6 = ADICIONAR + 1 = 7, cancelar = -2 -> 4
 		e1.nombre = "Pepito";
-			
+		e1.nroDeCreditos = 4;			
 		
 		//Crear 3 objetos Asignatura
 		Asignatura as1 = new Asignatura();
@@ -58,23 +60,33 @@ public class Program {
 		Asignatura as3 = new Asignatura();
 		as3.nombre = "Diseño de algoritmos";
 		as3.nota = 2;
-		as3.nroDeCreditos = 2;
-		
-		Asignatura as4 = new Asignatura();
-		as3.nombre = "Diseño de algoritmos";
-		as3.nota = 5;
 		as3.nroDeCreditos = 3;
 		
-		e1.addAsignatura(as1);
-		e1.addAsignatura(as2);
-		e1.addAsignatura(as3);
-		e1.addAsignatura(as4);
+		Asignatura as4 = new Asignatura();
+		as4.nombre = "Arquitectura de software";
+		as4.nota = 5;
+		as4.nroDeCreditos = 1;
 		
-		//Relaciones entre objetos
-		//Relación es: Un estudiante tiene 3 asignaturas.
-		
-		float promedioE1 = e1.calcularPromedio();
-		System.out.println("Promedio e1: " + promedioE1);
+		try {
+			e1.addAsignatura(as1);
+			e1.addAsignatura(as2);
+			e1.addAsignatura(as3);
+			e1.addAsignatura(as4);			
+			//código a escribir si todo sale bien
+			
+			//Relaciones entre objetos
+			//Relación es: Un estudiante tiene 3 asignaturas.
+			
+			float promedioE1 = e1.calcularPromedio();
+			System.out.println("Promedio e1: " + promedioE1);
+			
+		} catch (MaxAsignaturasException mae) {			//
+			throw new Exception(mae.getMessage());
+		} catch(CreditosInsuficientesException cie) {			
+			System.out.println(cie.getMessage());
+		} catch(Exception e) {
+			System.out.println("Ocurrió un error inesperado");
+		}		
 	}
 
 }
