@@ -49,3 +49,22 @@
 						Pasar todos los elementos del arr (Arreglo original) al arreglo arr1 que tiene el doble del tamaño del arreglo original. De esta manera, se pueden agregar más asignaturas.
 						
 	b) Subir el cambio a GitHub a más tardar el Sunday, Aug 30
+	
+------------------- Wednesday, Sep 2  ---------------------------------
+1. Ralizar el método llamado insertInPosition(int valor, int p), p es la posición donde se quiere insertar el nuevo nodo. El índice inicial comienza en cero (0)
+
+	Ej 1:
+		list = {3, 4, 6, 8, 41}
+		insertInPosition(7, 2)		
+		Resultado
+			list = { 3, 4, 7, 8, 41 }
+	Ej 2:
+		list = { 98, 35 }
+		insertInPosition(50, 0)
+		Resultado
+			list = {50, 98, 35}
+	Ej 3:
+		list = {3, 5, 4}
+		insertInPosition(1, 5)
+		Resultado
+			Mensaje de error: "No se puede insertar el elemento 1 en la posición 5"
