@@ -30,7 +30,29 @@ public class ListInt {
 				System.out.print(tmp.data + ", ");
 				tmp = tmp.next;
 			}
-		}
+		}	
+	}
 	
+	public void insert(int value, int p) {
+		
+		NodoInt nuevo = new NodoInt();
+		nuevo.data = value;
+		
+		if(head == null && p == 0) {
+			head = nuevo;
+		}
+		else {
+			int count = 0;
+			NodoInt tmp = head;
+			while(tmp != null) {				
+				if(count == p-1) {
+					nuevo.next = tmp.next;
+					tmp.next = nuevo;
+					break;
+				}
+				count++;
+				tmp = tmp.next;
+			}
+		}		
 	}
 }

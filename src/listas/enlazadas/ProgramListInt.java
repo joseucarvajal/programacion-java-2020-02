@@ -9,6 +9,7 @@ public class ProgramListInt {
 		list.insert(5);
 		list.insert(3);
 		list.insert(38);
+		list.insert(7, 2);
 		
 		list.printList();
 
