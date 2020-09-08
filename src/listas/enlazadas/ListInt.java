@@ -55,4 +55,19 @@ public class ListInt {
 			}
 		}		
 	}
+	
+	public int sumarElementos() {
+		int sum = 0;
+		if(head == null) {
+			return sum;
+		}
+		
+		NodoInt tmp = head;
+		while(tmp != null) {
+			sum = sum + tmp.data;
+			tmp = tmp.next;
+		}
+		
+		return sum;
+	}
 }

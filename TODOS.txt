@@ -68,3 +68,8 @@
 		insertInPosition(1, 5)
 		Resultado
 			Mensaje de error: "No se puede insertar el elemento 1 en la posición 5"
+			
+------------------- Thursday, Sep 17  ---------------------------------
+1. Contar cuántos números pares hay en una lista
+2. Eliminar un número de la lista
+3. Buscar un elemento en una lista

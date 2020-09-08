@@ -11,6 +11,9 @@ public class ProgramListInt {
 		list.insert(38);
 		list.insert(7, 2);
 		
+		int suma = list.sumarElementos();
+		System.out.println("La suma de los elementos de la lista es: " + suma);
+		
 		list.printList();
 
 	}
