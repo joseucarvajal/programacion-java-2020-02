@@ -73,3 +73,20 @@
 1. Contar cuántos números pares hay en una lista
 2. Eliminar un número de la lista
 3. Buscar un elemento en una lista
+
+------------------- Lunes, Sep 28  ---------------------------------
+1. Crear un nuevo repositorio en gitHub llamado "pilas-mayor" para almacenar el proyecto
+2. Crear una pila de productos. Cada producto tiene: precio, nombre, porcentaje de descuento
+3. Crear una estructura de Pila para almacenar estos productos
+4. Resolver los siguientes requerimientos:
+	4.1. Encontrar el producto más barato
+	4.2. Obtener cuánto dinero se otorgó en descuentos
+		Ej:
+			Producto 1: precio = 100, descuento = 30%
+			Producto 2: precio = 300, descuento = 70%
+		
+			Respuesta:
+				El dinero total en descuentos es: 30(primer producto) + 210(segundo producto), por lo tanto, el descuento total es de 240 pesos.
+	4.3. Cuál es el nombre del producto con más descuento.
+5. Hora máxima de entrega: 7:00 p.m.
+6. Se debe subir este proyecto al nuevo repositorio de gitHub "pilas-mayor" que se creó en el paso 1.
